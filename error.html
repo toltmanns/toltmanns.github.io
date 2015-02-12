@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix, AZ Coding and Programming</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <style>
+   /* html{
+      height: 100%;
+      overflow: hidden;
+    }
+   */
+    html{background: #eee;}
+      body{
+        background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+background-size:auto 320px;
+background-repeat: repeat-x;
+
+      }
+
+      hr{
+        margin:1.25rem 2rem 1.1875rem;
+      }
+
+      #logotype{
+        padding: 30px 30px 20px;
+      }
+      #wrap{
+        min-height: 300px;
+
+      }
+      #tagline{
+/*        text-align: center;
+*/        margin-top: 2px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      }
+      #tagline p{
+        margin-top:1.75rem;
+      }
+      #intro-p{
+        top: 15px;
+        position: relative;
+      }
+      #leftbar{
+        background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+        width: 10px;
+        position: absolute;
+        min-height: 100%;
+      }
+      #whygolegit h3{
+        margin-bottom: 1.5rem;
+      }
+      #getintouch p{
+        margin-left: 1rem;
+      }
+      p, li{
+        font-size: 0.9rem;
+        line-height: 1.8;
+        /*text-indent: 0.5rem;*/
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      }
+      h1{
+        font-family: 'PT Serif Caption', serif;
+        font-weight: 100;
+        -webkit-font-smoothing: antialiased;
+/*text-shadow: 0 0 1px rgba(0,0,0,0.3);      */
+}
+    </style>
+    <script src="js/modernizr.js"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+    <!-- <div class="row">
+      <div class="large-12 columns">
+        <h1>No B.S. Web Site Development Services</h1>
+      </div>
+    </div> -->
+    <div id="leftbar"></div>
+    <div id="wrap">
+      <div class="row">
+        <div class="large-12 columns" id="logotype">
+          <h3>We are <strong>Legit Development</strong></h3>
+        </div>
+      </div>
+
+      <div class="row" id="hero">
+        <div class="large-12 columns" style="margin-left:1rem">
+          Error Processing Request
+      	</div>
+      </div><!-- hero -->
+
+
+
+
+    </div><!-- wrap -->
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      $(document).ready(function(){
+        $('#leftbar').height($(window).height());
+        $(window).resize(function(){
+          $('#leftbar').height($(window).height());
+        });
+        $('#contact').click(function(e){
+          e.preventDefault();
+          $.scrollTo('a[name="contact"]')
+        });
+        $('label[for="email"], input[name="email"]').hide();
+      });
+    </script>
+    <script>
+    /**
+     * Copyright (c) 2007-2013 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+     * Licensed under MIT
+     * @author Ariel Flesler
+     * @version 1.4.7
+     */
+    (function(d){function h(b){return"object"==typeof b?b:{top:b,left:b}}var n=d.scrollTo=function(b,c,a){return d(window).scrollTo(b,c,a)};n.defaults={axis:"xy",duration:1.3<=parseFloat(d.fn.jquery)?0:1,limit:!0};n.window=function(b){return d(window)._scrollable()};d.fn._scrollable=function(){return this.map(function(){if(this.nodeName&&-1==d.inArray(this.nodeName.toLowerCase(),["iframe","#document","html","body"]))return this;var b=(this.contentWindow||this).document||this.ownerDocument||this;return/webkit/i.test(navigator.userAgent)|| "BackCompat"==b.compatMode?b.body:b.documentElement})};d.fn.scrollTo=function(b,c,a){"object"==typeof c&&(a=c,c=0);"function"==typeof a&&(a={onAfter:a});"max"==b&&(b=9E9);a=d.extend({},n.defaults,a);c=c||a.duration;a.queue=a.queue&&1<a.axis.length;a.queue&&(c/=2);a.offset=h(a.offset);a.over=h(a.over);return this._scrollable().each(function(){function q(b){k.animate(e,c,a.easing,b&&function(){b.call(this,g,a)})}if(null!=b){var l=this,k=d(l),g=b,p,e={},s=k.is("html,body");switch(typeof g){case "number":case "string":if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(g)){g= h(g);break}g=d(g,this);if(!g.length)return;case "object":if(g.is||g.style)p=(g=d(g)).offset()}d.each(a.axis.split(""),function(b,d){var c="x"==d?"Left":"Top",m=c.toLowerCase(),f="scroll"+c,h=l[f],r=n.max(l,d);p?(e[f]=p[m]+(s?0:h-k.offset()[m]),a.margin&&(e[f]-=parseInt(g.css("margin"+c))||0,e[f]-=parseInt(g.css("border"+c+"Width"))||0),e[f]+=a.offset[m]||0,a.over[m]&&(e[f]+=g["x"==d?"width":"height"]()*a.over[m])):(c=g[m],e[f]=c.slice&&"%"==c.slice(-1)?parseFloat(c)/100*r:c);a.limit&&/^\d+$/.test(e[f])&& (e[f]=0>=e[f]?0:Math.min(e[f],r));!b&&a.queue&&(h!=e[f]&&q(a.onAfterFirst),delete e[f])});q(a.onAfter)}}).end()};n.max=function(b,c){var a="x"==c?"Width":"Height",h="scroll"+a;if(!d(b).is("html,body"))return b[h]-d(b)[a.toLowerCase()]();var a="client"+a,l=b.ownerDocument.documentElement,k=b.ownerDocument.body;return Math.max(l[h],k[h])-Math.min(l[a],k[a])}})(jQuery);
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46155416-1', 'legitdevelopment.com');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
