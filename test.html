@@ -87,15 +87,16 @@ Go
 $(document).ready(function(){
 
 var countPerMinute = 1000000;
-
+console.log(countPerMinute);
 	$('button').click(function(){
+console.log(countPerMinute);
 		var start = new Date().getTime();
 		setInterval(function(){
 			var now = new Date().getTime();
 			var diffInMilliseconds = (now-start)/60000; // 60000 is num milliseconds in minute;
 			var countMultiplied = Math.round(diffInMilliseconds * countPerMinute);
 
-//console.log(diffInMilliseconds, countPerMinute);
+console.log(diffInMilliseconds, countPerMinute);
 
 			$('#test').text(countMultiplied);
 		}, 250);
