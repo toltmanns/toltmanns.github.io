@@ -77,17 +77,21 @@ html { height: 100%; }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script></head>
 <script type="javascript">
-var countPerMinute = 30000;
-$(document).ready(function(){
+$(document).ready(function(countPerMinute){
 
-	button.click(function(){
-		var start = new Date.getTime();
-		setInterval(1, function(){
-			var now = new Date.getTime();
-			var diffInMinutes = (now-start)/60000; // 60000 is num milliseconds in minute;
-			var countMultiplied = diffInMinutes / countPerMinute;
+var countPerMinute = 1000000;
+
+	$('button').click(function(){
+		var start = new Date().getTime();
+		setInterval(function(){
+			var now = new Date().getTime();
+			var diffInMilliseconds = (now-start)/60000; // 60000 is num milliseconds in minute;
+			var countMultiplied = Math.round(diffInMilliseconds * countPerMinute);
+
+//console.log(diffInMilliseconds, countPerMinute);
+
 			$('#test').text(countMultiplied);
-		});
+		}, 250);
 	});
 });
 </script>
