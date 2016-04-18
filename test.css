@@ -1,6 +1,7 @@
 
-html { height: 100%; }
+html body{ background: #000; height: 100%; }
 #test{
+	color: #fff;
 	    margin: 0 auto;
     width: 100%;
     font-size: 8em;
