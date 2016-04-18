@@ -6,4 +6,5 @@ html body{ background: #000; height: 100%; }
     width: 100%;
     font-size: 8em;
     text-align:center;
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 }
