@@ -37,13 +37,6 @@ $(document).ready(function(){
 		$('button').click();
 	}
 	
-    	$('#test').css({
-		'position' : 'absolute',
-		'left' : '50%',
-		'top' : '44%',
-		'margin-left' : -$('#test').outerWidth()/2,
-		'margin-top' : -$('#test').outerHeight()/2
-	    });
 
 	$('button').click(function(){
 		var countPerMinute = getParameterByName('increment') || 1000000;
@@ -58,6 +51,15 @@ $(document).ready(function(){
 		}, 250);
 	});
 	$('button').click();
+	
+	$('#test').css({
+		'position' : 'absolute',
+		'left' : '50%',
+		'top' : '44%',
+		'margin-left' : -$('#test').outerWidth()/2,
+		'margin-top' : -$('#test').outerHeight()/2
+	    });
+
 });
 
 
