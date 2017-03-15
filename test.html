@@ -4,7 +4,7 @@
 <link href="/test.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<button type="button">
+<button type="button" style="margin-left:-9000px;">
 Go
 </button>
 <p id="test">test</p>
@@ -24,11 +24,23 @@ function getParameterByName(name, url) {
 
 
 $(document).ready(function(){
+	
+	var interval = null;
+	
+	var resetMinutes = getParameterByName('reset') || 0;
+	if (resetMinutes) {
+		setInterval(function() {
+			clearInterval(interval);
+			$('button').click();
+		}, resetMinutes * 1000 * 60); 
+	} else {
+		$('button').click();
+	}
 
 	$('button').click(function(){
 		var countPerMinute = getParameterByName('increment') || 1000000;
 		var start = new Date().getTime();
-		setInterval(function(){
+		interval = setInterval(function(){
 			var now = new Date().getTime();
 			var diffInMilliseconds = (now-start)/60000; // 60000 is num milliseconds in minute;
 			var countMultiplied = Math.round(diffInMilliseconds * countPerMinute);
