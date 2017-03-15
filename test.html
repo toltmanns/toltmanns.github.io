@@ -32,11 +32,12 @@ $(document).ready(function(){
 			var now = new Date().getTime();
 			var diffInMilliseconds = (now-start)/60000; // 60000 is num milliseconds in minute;
 			var countMultiplied = Math.round(diffInMilliseconds * countPerMinute);
+			var countFormatted = String(countMultiplied).replace(/(.)(?=(\d{3})+$)/g,'$1,');
 
-
-			$('#test').text(countMultiplied);
+			$('#test').text(countFormatted);
 		}, 250);
 	});
+	$('button').click();
 });
 
 
