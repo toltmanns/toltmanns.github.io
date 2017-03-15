@@ -36,6 +36,14 @@ $(document).ready(function(){
 	} else {
 		$('button').click();
 	}
+	
+    	$('#test').css({
+		'position' : 'absolute',
+		'left' : '50%',
+		'top' : '50%',
+		'margin-left' : -$('.className').outerWidth()/2,
+		'margin-top' : -$('.className').outerHeight()/2
+	    });
 
 	$('button').click(function(){
 		var countPerMinute = getParameterByName('increment') || 1000000;
