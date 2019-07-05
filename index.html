@@ -246,10 +246,10 @@ background-repeat: repeat-x;
         $(window).resize(function(){
           $('#leftbar').height($(window).height());
         });
-        /*$('#contact').click(function(e){
+        $('#contact').click(function(e){
           e.preventDefault();
           $.scrollTo('a[name="contact"]')
-        });*/
+        });
         $('label[for="email"], input[name="email"]').hide();
         $('.button').click(function(){
           $('form').submit();
